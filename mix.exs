@@ -41,7 +41,7 @@ defmodule HTTPoison.Mixfile do
 
   defp deps do
     [
-      {:hackney, "~> 1.17"},
+      {:hackney, [env: :prod, git: "https://github.com/mpihlak/hackney", branch: "no-pooling-here"]},
       {:mimic, "~> 0.1", only: :test},
       {:jason, "~> 1.2", only: :test},
       {:httparrot, "~> 1.2", only: :test},
